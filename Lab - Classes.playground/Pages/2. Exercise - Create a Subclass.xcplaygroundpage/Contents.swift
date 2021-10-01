@@ -29,6 +29,17 @@ class Spaceship {
 let falcon = Spaceship()
 falcon.name = "falcon"
 
+class Fighter: Spaceship{
+    var weapon:String = ""
+    var remainingFirePower:Int = 5
+}
+var destroyer = Fighter()
+destroyer.weapon = "Laser"
+destroyer.remainingFirePower = 10
+destroyer.moveRight()
+print(destroyer.position)
+print(destroyer.name)
+
 /*:
  Create a new instance of `Fighter` called `destroyer`. A `Fighter` will be able to shoot incoming objects to avoid colliding with them. After initialization, set `weapon` to "Laser" and `remainingFirePower` to 10. Note that since `Fighter` inherits from `Spaceship`, it also has properties for `name`, `health`, and `position`, and has methods for `moveLeft()`, `moveRight()`, and `wasHit()` even though you did not specifically add them to the declaration of `Fighter`. Knowing that, set `name` to "Destroyer," print `position`, then call `moveRight()` and print `position` again.
  */
